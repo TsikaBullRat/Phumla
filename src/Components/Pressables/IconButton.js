@@ -2,20 +2,20 @@ import React from 'react';
 import { Pressable, View, Image } from 'react-native';
 import { AntDesign, Entypo, FontAwesome, FontAwesome5, MaterialIcons, Ionicons  } from '@expo/vector-icons';
 import { Hamburger } from '..';
-const CompGen = (type) =>{
+const CompGen = (type, color) =>{
     let icon;
     switch(type){
         case 'location':
-            icon = <View style={{transform: 'rotate(180deg)'}}><Entypo name="drop" size={24} color="black" /></View>
+            icon = <View style={{transform: 'rotate(180deg)'}}><Entypo name="drop" size={24} color={color} /></View>
             break
         case 'drop':
-            icon = <MaterialIcons name="arrow-drop-down" size={24} color="black" />
+            icon = <MaterialIcons name="arrow-drop-down" size={24} color={color} />
             break
         case 'edit':
-            icon = <FontAwesome name="edit" size={24} color="black" />
+            icon = <FontAwesome name="edit" size={24} color={color} />
             break
         case 'search':
-            icon = <FontAwesome5 name="search" size={24} color="black" />
+            icon = <FontAwesome5 name="search" size={24} color={color} />
             break
         case 'hamburger': 
             icon = (
@@ -23,12 +23,12 @@ const CompGen = (type) =>{
             )
         case 'forward':
             icon = (
-                <Ionicons name="chevron-forward-circle-outline" size={24} color="black" />
+                <Ionicons name="chevron-forward-circle-outline" size={24} color={color} />
             )
             break
         case 'back':
             icon = (
-                <Ionicons name="chevron-back-circle-outline" size={24} color="black" />
+                <Ionicons name="chevron-back-circle-outline" size={24} color={color} />
             )
             break
         default:
@@ -38,10 +38,10 @@ const CompGen = (type) =>{
     return icon
 }
 
-export const IconButton = ({type, Func}) =>{
+export const IconButton = ({color, type, Func}) =>{
     return(
         <Pressable onPress={Func}>
-            {CompGen(type)}
+            {CompGen(type, color)}
         </Pressable>
     )
 }

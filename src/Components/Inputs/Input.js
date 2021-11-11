@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, TextInput } from 'react-native';
 
-export const Input = ({Note}) =>{
+export const Input = ({proxy, Note}) =>{
     return(
-        <TextInput style={styles.input} placeholder="Hello" onChangeText={text=>Note(text)}/>
+        <TextInput style={styles.input} placeholder={proxy} onChangeText={text=>Note(text)}/>
     )
 }
 

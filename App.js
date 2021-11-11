@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, View, Image } from 'react-native';
-import { Calendar } from './src/Components';
+import { BookingCard } from './src/Components';
+
 export default function App() {
 
+  
   return (
     <View style={styles.container}>
-      <Calendar/>
+      <BookingCard/>
     </View>
   );
 }
@@ -14,7 +16,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },

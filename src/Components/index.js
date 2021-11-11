@@ -11,7 +11,9 @@ export {Calendar} from './Inputs/Calendar'
 export {Head} from './Inputs/CalHead'
 export {Block} from './Fixed/CalBlock'
 export {Days, Grid} from './Fixed/WeekSet'
-
+export {DropDown} from './Inputs/DropDown'
+export {RoomCard} from './Cards/RoomCard'
+export {Search} from './Inputs/Search'
 //SVG's
 import Logo from './SVG/Logo.svg'
 import Hamburger from './SVG/Hamburger.svg'

@@ -6,6 +6,10 @@ export const BookingCard = () =>{
     return(
         <View style={styles.box}>
             <ImageBackground style={styles.image}>
+                <View style={styles.cornerText}>
+                    <Text>Name</Text>
+                    <Text>Range</Text>
+                </View>
                 <View style={styles.tab}>
                     <View style={styles.containerBox}>
                     <View style={styles.right}><Set stars={5}/></View>
@@ -18,9 +22,13 @@ export const BookingCard = () =>{
 }
 
 const styles = StyleSheet.create({
+    cornerText:{
+        top: 20,
+        left: 15
+    },
     box:{
-        width: 270,
-        height: 170,
+        width: 330,
+        height: 220,
         borderRadius: 25,
         borderWidth: 2,
         overflow: 'hidden'
@@ -32,7 +40,7 @@ const styles = StyleSheet.create({
     tab:{
         backgroundColor: '#6F4848',
         position: 'absolute',
-        bottom: -60,
+        bottom: -80,
         width: '120%',
         height: '80%',
         transform: 'rotate(-10deg)'
@@ -46,11 +54,12 @@ const styles = StyleSheet.create({
     },
     left:{
         position: 'relative',
-        left: 55,
-        bottom: 20
+        left: 100,
+        bottom: 10
     },
     right:{
         position: 'relative',
-        bottom: 2
+        bottom: 2,
+        left: 20
     }
 })

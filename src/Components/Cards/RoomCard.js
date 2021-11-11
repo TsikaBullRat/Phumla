@@ -1,16 +1,14 @@
 import React from 'react';
-import { ImageBackground, Text, TouchableOpacity, StyleSheet, View } from 'react-native';
-import { Set } from '..';
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export const InfoCard = () =>{
+export const RoomCard = () =>{
     return(
         <TouchableOpacity style={styles.box}>
             <ImageBackground style={styles.image}>
                 <View style={styles.tab}>
                     <View style={styles.textBox}>
                     <Text >Name</Text>
-                    <Text >Range</Text>
-                    <Set stars={5}/>
+                    <Text >Price</Text>
                     </View>
                 </View>
             </ImageBackground>
@@ -20,7 +18,7 @@ export const InfoCard = () =>{
 
 const styles = StyleSheet.create({
     box:{
-        width: 240,
+        width: 170,
         height: 170,
         borderRadius: 25,
         borderWidth: 2,
@@ -31,17 +29,18 @@ const styles = StyleSheet.create({
         height: '100%'
     },
     tab:{
-        backgroundColor: '#6F4848',
+        backgroundColor: '#A08F8F',
         position: 'absolute',
-        bottom: -70,
+        top: -80,
+        left: -47,
         width: '120%',
         height: '80%',
-        transform: 'rotate(-10deg)'
+        transform: 'rotate(-30deg)'
     },
     textBox:{
         position: 'relative',
-        top: '25%',
-        left: '50%',
-        transform: 'rotate(10deg)'
+        top: '85%',
+        left: '15%',
+        transform: 'rotate(30deg)'
     }
 })
