@@ -11,12 +11,12 @@ const styles = StyleSheet.create({
     input:{
         backgroundColor: '#2B2B2B',
         borderColor: '#fff',
-        borderWidth: 2,
+        borderWidth: 1,
         borderRadius: 25,
         color: '#fff',
         fontSize: 18,
         height: 45,
-        width: '90%',
+        width: '80%',
         paddingLeft: 30
     }
 })
