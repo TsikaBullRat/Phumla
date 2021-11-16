@@ -1,21 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Image } from 'react-native';
-import { Login } from './src/Screens';
+import { NavigationContainer } from '@react-navigation/native'
+import { auth } from './src/Functions';
+import { Auth } from './src/Screens';
 
 export default function App() {
 
-  
+  const [user, setUser] = useState(null)
+
+  useEffect(()=>{
+    auth.onAuthStateChanged(user=>setUser(user))
+  },[user])
+
   return (
-    <View style={styles.container}>
-      <Login/>
-    </View>
+      <NavigationContainer>
+        {
+          user?(
+            null
+          ):(
+            <Auth />
+          )
+        }
+      </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },

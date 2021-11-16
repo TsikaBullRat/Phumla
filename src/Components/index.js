@@ -19,6 +19,6 @@ import Logo from './SVG/Logo.svg'
 import Hamburger from './SVG/Hamburger.svg'
 export {Logo, Hamburger}
 //Backgrounds
-export {LoginBack} from './Backgrounds'
+export {LoginBack, RegisterBack} from './Backgrounds'
 
 //icons8-invert-colors-48 1

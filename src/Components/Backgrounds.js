@@ -16,6 +16,19 @@ const LoginBack = ({children}) =>{
     )
 }
 
+const RegisterBack = ({children}) =>{
+    return(
+        <ImageBackground source={Picture} style={styles.background}>
+            <View style={styles.layer}>
+            </View>
+            <View style={styles.triangle2}></View>
+            <View style={styles.content}>
+                {children}
+            </View>
+        </ImageBackground>
+    )
+}
+
 const styles = StyleSheet.create({
     background:{
         width: '100vw',
@@ -43,6 +56,20 @@ const styles = StyleSheet.create({
         top: '-110vh'
         // opacity: 2
     },
+    triangle2:{
+        width: 0,
+        height: 0,
+        backgroundColor: 'transparent',
+        borderLeftWidth: 300,
+        borderRightWidth: 350,
+        borderBottomWidth: 450,
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent',
+        borderBottomColor: '#6F4848',
+        transform: 'rotate(8deg)',
+        left: -80,
+        top: '-130vh'
+    },
     content:{
         // backgroundColor: '#000',
         width: '100vw',
@@ -51,4 +78,4 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     }
 })
-export {LoginBack}
+export {LoginBack, RegisterBack}

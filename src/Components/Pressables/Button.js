@@ -18,7 +18,9 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#A08F8F'
+        backgroundColor: '#A08F8F',
+        marginTop: 10,
+        marginBottom: 10 
     },
     btnText:{
         fontSize: 15,

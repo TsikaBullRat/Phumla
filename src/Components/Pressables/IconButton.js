@@ -28,7 +28,7 @@ const CompGen = (type, color) =>{
             break
         case 'back':
             icon = (
-                <Ionicons name="chevron-back-circle-outline" size={24} color={color} />
+                <Ionicons name="chevron-back-circle-outline" size={35} color={color} />
             )
             break
         default:
