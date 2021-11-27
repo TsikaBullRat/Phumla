@@ -1,4 +1,6 @@
-const SignUp = () =>{}
+const SignUp = () =>{
+    
+}
 const SignIn = () =>{}
 const SignOut = () =>{}
 const Reset = () =>{}
