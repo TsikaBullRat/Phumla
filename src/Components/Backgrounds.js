@@ -16,6 +16,20 @@ const LoginBack = ({children}) =>{
     )
 }
 
+const RegisterBack = () =>{
+    return(
+        <ImageBackground source={Picture} style={styles.background}>
+            <View style={styles.layer}>
+                
+            </View>
+            <View style={styles.triangle1}></View>
+            <View style={styles.content}>
+                {children}
+            </View>
+        </ImageBackground>
+    )
+}
+
 const styles = StyleSheet.create({
     background:{
         width: '100vw',
