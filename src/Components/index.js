@@ -14,11 +14,12 @@ export {Days, Grid} from './Fixed/WeekSet'
 export {DropDown} from './Inputs/DropDown'
 export {RoomCard} from './Cards/RoomCard'
 export {Search} from './Inputs/Search'
+export {UserLogs} from './Cards/UserLogs'
 //SVG's
 import Logo from './SVG/Logo.svg'
 import Hamburger from './SVG/Hamburger.svg'
 export {Logo, Hamburger}
 //Backgrounds
-export {LoginBack, RegisterBack} from './Backgrounds'
+export {LoginBack, RegisterBack, HomeBack} from './Backgrounds'
 
 //icons8-invert-colors-48 1

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import { Button, IconButton, Input, RegisterBack } from '../../Components';
+import { Button, IconButton, Input, RegisterBack, UserLogs } from '../../Components';
 import { SignUp } from '../../Functions';
 
 export const Register = ({ navigation: { goBack, navigate }, setData }) => {
@@ -10,44 +10,49 @@ export const Register = ({ navigation: { goBack, navigate }, setData }) => {
         [password, setPassword] = useState(),
         [checked, setChecked] = useState(false),
         [count, setCount] = useState(0),
-        
+        [modal, setModal] = useState(false),
+        [message, setMessage] = useState(null),
+        [fname, setFname] = useState(null),
+        [mname, setMname] = useState(null),
+        [lname, setLname] = useState(null),
         Navigate = () => {
             email ? (
                 password ? (
                     checked ? (
-                        count > 1 ? console.log("Fix you password please") : setCount(count + 1)
+                        count > 1 ? (setMessage("Fix your password please"), setModal(true) ): setCount(count + 1)
                     ) : (
-                        setData({
-                            email: email,
-                            number: number,
-                            password: password
-                        }),
+                        SignUp(email,password, fname, mname, lname, number),
                         navigate('setprofile')
                     )
-                ) : console.log("Please enter password")
-            ) : console.log("Please enter email address")
+                ) : setMessage("Please enter password"), setModal(true)
+            ) : setMessage("Please enter email address"), setModal(true)
         };
 
     useEffect(() => {
         checked !== password ? null : setChecked(false)
-    })
+    }, [checked])
 
     return (
         <RegisterBack>
+            {/* <UserLogs msg={message} visiblity={modal} setVisiblity={setModal}/> */}
             <View style={styles.back}>
                 <IconButton type="back" color="#fff" Func={goBack} />
             </View>
             <View style={styles.headingPosition}>
-                <Text style={styles.heading}>Sign up and Realax</Text>
+                <Text style={styles.heading}>Sign up and Relax</Text>
             </View>
             <View style={styles.inputs}>
                 <Input proxy="Email" margin={15} Note={setEmail} />
+                <Input proxy="Firstname" margin={15} Note={setFname}/>
+                <Input proxy="Middle Name" margin={15} Note={setMname}/>
+                <Input proxy="Lastname" margin={15} Note={setLname}/>
                 <Input proxy="Phonenumber" margin={15} Note={setNumber} />
                 <Input proxy="Password" margin={15} privacy Note={setPassword} />
                 <Input proxy="Confirm Password" margin={15} privacy Note={setChecked} />
                 {checked ? <Text style={styles.warning}>Warning: Password does not match</Text> : null}
+                <Button text="Next" Action={Navigate} />
             </View>
-            <Button text="Next" Action={Navigate} />
+            
         </RegisterBack>
     )
 }
@@ -68,8 +73,8 @@ const styles = StyleSheet.create({
     inputs: {
         width: '100%',
         alignItems: 'center',
-        top: 85,
-        height: 400
+        top: 125,
+        height: 'auto'
     },
     warning: {
         fontSize: 15,

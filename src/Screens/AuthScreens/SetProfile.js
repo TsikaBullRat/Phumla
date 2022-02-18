@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Button, IconButton, Input, RegisterBack } from '../../Components';
 
 export const SetProfile = ({navigation:{goBack, naviagte}}) =>{
+
+    const [fname, setFname] = useState(null),
+        [mname, setMname] = useState(null),
+        [lname, setLname] = useState(null)
+
     return(
         <RegisterBack>
             <View style={styles.back}>
@@ -12,10 +17,11 @@ export const SetProfile = ({navigation:{goBack, naviagte}}) =>{
             <Text style={styles.heading}>Sign up and Realax</Text>
             </View>
             <View style={styles.inputs}>
-                <Input proxy="Firstname" margin={15} Note={console.log}/>
-                <Input proxy="Middle Name" margin={15} Note={console.log}/>
-                <Input proxy="Lastname" margin={15} Note={console.log}/>
+                <Input proxy="Firstname" margin={15} Note={setFname}/>
+                <Input proxy="Middle Name" margin={15} Note={setMname}/>
+                <Input proxy="Lastname" margin={15} Note={setLname}/>
             </View>
+            {fname? <Button text="Done" /> : null}
             <Button text="Skip" />
         </RegisterBack>
     )

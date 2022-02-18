@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { color } from 'react-native-reanimated';
 import { Button, Input, LoginBack, Logo } from '../../Components';
+import { SignIn } from '../../Functions';
 
 
 export const Login = ({navigation}) =>{
+    const [email, setEmail] = useState(''),
+        [password, setPassword] = useState(''),
+        Enter = () =>{
+            SignIn(email, password)
+        }
+        
     return(
         <LoginBack>
             <View style={styles.head}>
@@ -17,11 +24,11 @@ export const Login = ({navigation}) =>{
                 </Text>
             </View>
             <View style={styles.inputs}>
-                <Input proxy="Email" margin={20} />
-                <Input proxy="Password" margin={20} privacy/>
+                <Input proxy="Email" margin={20} Note={setEmail} />
+                <Input proxy="Password" margin={20} Note={setPassword} privacy/>
             </View>
             <View style={styles.buttons}>
-                <Button text="Sign In" />
+                <Button text="Sign In" Action={Enter} />
                 <Text style={styles.buttonsText}>OR</Text>
                 <Button text="Google" />
                 <Button text="Apple" />
