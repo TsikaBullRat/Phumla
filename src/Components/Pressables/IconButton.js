@@ -6,7 +6,7 @@ const CompGen = (type, color) =>{
     let icon;
     switch(type){
         case 'location':
-            icon = <View style={{transform: 'rotate(180deg)'}}><Entypo name="drop" size={24} color={color} /></View>
+            icon = <View style={{transform: [{skewX:"180deg"}]}}><Entypo name="drop" size={24} color={color} /></View>
             break
         case 'drop':
             icon = <MaterialIcons name="arrow-drop-down" size={24} color={color} />

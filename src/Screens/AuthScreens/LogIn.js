@@ -51,14 +51,14 @@ const styles = StyleSheet.create({
         fontSize: 45,
         color: '#fff',
         fontFamily: "Italiana-Regular",
-        fontWeight: 2,
+        fontWeight: "200",
         marginTop: 35
     },
     subHeading:{
         fontSize: 25,
         color: '#fff',
         fontFamily: "Italiana-Regular",
-        fontWeight: 1,
+        fontWeight: "100",
         width: 250,
         margin: 20
     },

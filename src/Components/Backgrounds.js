@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     borderBottomColor: "transparent",
     borderTopColor: "transparent",
     borderLeftColor: "#6F4848",
-    transform: "rotate(-5deg)",
+    transform: [{skewX:"-5deg"}],
     left: -20,
     top: "-110vh",
     // opacity: 2
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     borderBottomColor: "#6F4848",
-    transform: "rotate(8deg)",
+    transform: [{skewX:"8deg"}],
     left: -80,
     top: "-130vh",
   },
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     borderBottomColor: "#6F4848",
-    transform: "rotate(-30deg)",
+    transform: [{skewX:"-30deg"}],
     left: -200,
     top: -200,
   },
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     width: 400,
     top: 300,
     left: -160,
-    transform: "rotate(30deg)",
+    transform: [{skewX:"30deg"}],
     justifyContent: 'space-evenly'
   },
   profilePic:{

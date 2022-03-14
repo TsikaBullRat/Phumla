@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     back:{
-        position: 'fixed',
+        position: 'absolute',
     }
 })
