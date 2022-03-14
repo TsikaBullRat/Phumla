@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
         bottom: -80,
         width: '120%',
         height: '80%',
-        transform: 'rotate(-10deg)'
+        transform: [{skewX:"-10deg"}]
     },
     containerBox:{
         flexDirection: 'row',
         position: 'relative',
         top: 50,
         left: 10,
-        transform: 'rotate(10deg)'
+        transform: [{skewX:"10deg"}]
     },
     left:{
         position: 'relative',

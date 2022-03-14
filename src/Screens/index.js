@@ -7,4 +7,4 @@ export { SetProfile } from "./AuthScreens/SetProfile";
 export { Home } from "./MainScreens/Home";
 
 //Navigations
-export { Auth, Main, Run } from "./ScreenNavs/Protocol";
+// export { Auth, Main, Run } from "./ScreenNavs/Protocol";

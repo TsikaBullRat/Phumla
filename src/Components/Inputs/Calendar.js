@@ -21,6 +21,7 @@ export const Calendar = () => {
     )
 }
 
+
 const styles = StyleSheet.create({
     box: {
         borderWidth: 1.5,

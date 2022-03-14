@@ -34,7 +34,6 @@ export const Register = ({ navigation: { goBack, navigate }, setData }) => {
 
     return (
         <RegisterBack>
-            {/* <UserLogs msg={message} visiblity={modal} setVisiblity={setModal}/> */}
             <View style={styles.back}>
                 <IconButton type="back" color="#fff" Func={goBack} />
             </View>
@@ -66,14 +65,14 @@ const styles = StyleSheet.create({
         top: 45
     },
     heading: {
-        fontFamily: 'Italian-Regular',
+        // fontFamily: 'Italiana-Regular',
         fontSize: 25,
         color: '#fff',
     },
     inputs: {
         width: '100%',
         alignItems: 'center',
-        top: 125,
+        top: 105,
         height: 'auto'
     },
     warning: {

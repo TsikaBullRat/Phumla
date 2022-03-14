@@ -42,19 +42,19 @@ const HomeBack = ({ name, children, uri }) => {
 const styles = StyleSheet.create({
   background1: {
     width: "auto",
-    height: "100vh",
+    height: "100%",
     overflow: "hidden",
   },
   background2: {
-    width: "100vw",
-    height: "100vh",
+    width: "100%",
+    height: "100%",
     overflow: "hidden",
   },
   layer: {
     backgroundColor: "#A08F8F",
     opacity: 0.4,
-    width: "100vw",
-    height: "100vh",
+    width: "100%",
+    height: "100%",
   },
   triangle1: {
     width: 0,
@@ -66,9 +66,9 @@ const styles = StyleSheet.create({
     borderBottomColor: "transparent",
     borderTopColor: "transparent",
     borderLeftColor: "#6F4848",
-    transform: "rotate(-5deg)",
+    transform: [{skewX:"-5deg"}],
     left: -20,
-    top: "-110vh",
+    top: -880,
     // opacity: 2
   },
   triangle2: {
@@ -81,9 +81,9 @@ const styles = StyleSheet.create({
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     borderBottomColor: "#6F4848",
-    transform: "rotate(8deg)",
+    transform: [{skewX:"80deg"}],
     left: -80,
-    top: "-130vh",
+    top: -980,
   },
   triangle3: {
     width: 0,
@@ -95,26 +95,29 @@ const styles = StyleSheet.create({
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     borderBottomColor: "#6F4848",
-    transform: "rotate(-30deg)",
+    transform: [{skewX:"-30deg"}],
     left: -200,
     top: -200,
   },
   subTitle: {
     flexDirection: "row",
-    fontFamily: "Italiana-Regular",
+    // fontFamily: "Italiana-Regular",
     color: "#fff",
     fontSize: 25,
   },
   content: {
     // backgroundColor: '#000',
-    width: "100vw",
-    height: "100vh",
-    top: "-170vh",
+    width: "100%",
+    height: "100%",
+    top: -80,
+    position: "absolute",
     alignItems: "center",
+    flex: 1,
+    justifyContent: "center"
   },
   title: {
     flexDirection: "row",
-    fontFamily: "Italiana-Regular",
+    // fontFamily: "Italiana-Regular",
     color: "#fff",
     fontSize: 35,
   },
@@ -124,7 +127,7 @@ const styles = StyleSheet.create({
     width: 400,
     top: 300,
     left: -160,
-    transform: "rotate(30deg)",
+    transform: [{skewX:"30deg"}],
     justifyContent: 'space-evenly'
   },
   profilePic:{

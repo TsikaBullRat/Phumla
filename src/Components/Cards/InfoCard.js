@@ -36,12 +36,12 @@ const styles = StyleSheet.create({
         bottom: -70,
         width: '120%',
         height: '80%',
-        transform: 'rotate(-10deg)'
+        transform: [{skewX:"-10deg"}]
     },
     textBox:{
         position: 'relative',
         top: '25%',
         left: '50%',
-        transform: 'rotate(10deg)'
+        transform: [{skewX:"10deg"}]
     }
 })
