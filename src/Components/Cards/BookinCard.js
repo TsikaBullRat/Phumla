@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ImageBackground, Text, TouchableOpacity, StyleSheet, View } from 'react-native';
 import { Button, Set } from '..';
 
-export const BookingCard = () =>{
+export const BookingCard = ({ hotel, Push }) =>{
+
+    const [ range, setRange ] = useState()
+    const findRange = () =>{
+        let prices = hotel.rooms.map(item=>item.price)
+        prices = prices.sort()
+        setRange(`R${prices[0]} - R${prices[prices.length - 1]}`)
+    }
+    useEffect(()=>{
+        findRange()
+    },[])
+
     return(
-        <View style={styles.box}>
+        <TouchableOpacity style={styles.box}>
             <ImageBackground style={styles.image}>
                 <View style={styles.cornerText}>
-                    <Text>Name</Text>
-                    <Text>Range</Text>
+                    <Text>{hotel.name}</Text>
+                    <Text>{range}</Text>
                 </View>
                 <View style={styles.tab}>
                     <View style={styles.containerBox}>
-                    <View style={styles.right}><Set stars={5}/></View>
-                    <View style={styles.left}><Button text="Book"/></View>
+                    <View style={styles.right}><Set stars={hotel.rating}/></View>
+                    <View style={styles.left}><Button text="Book" Action={()=>Push(hotel)}/></View>
                     </View>
                 </View>
             </ImageBackground>
-        </View>
+        </TouchableOpacity>
     )
 }
 
@@ -43,19 +54,20 @@ const styles = StyleSheet.create({
         bottom: -80,
         width: '120%',
         height: '80%',
-        transform: [{skewX:"-10deg"}]
+        transform: [{rotate:"-10deg"}]
     },
     containerBox:{
         flexDirection: 'row',
         position: 'relative',
         top: 50,
         left: 10,
-        transform: [{skewX:"10deg"}]
+        transform: [{rotate:"10deg"}]
     },
     left:{
         position: 'relative',
         left: 100,
-        bottom: 10
+        bottom: 30,
+        transform: [{scale: 0.8}]
     },
     right:{
         position: 'relative',

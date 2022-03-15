@@ -20,6 +20,6 @@ import Logo from './SVG/Logo.svg'
 import Hamburger from './SVG/Hamburger.svg'
 export {Logo, Hamburger}
 //Backgrounds
-export {LoginBack, RegisterBack, HomeBack} from './Backgrounds'
+export {LoginBack, RegisterBack, HomeBack, BookingBack} from './Backgrounds'
 
 //icons8-invert-colors-48 1

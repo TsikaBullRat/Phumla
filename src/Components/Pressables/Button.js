@@ -11,8 +11,8 @@ export const Button = ({Action, text}) =>{
 
 const styles = StyleSheet.create({
     btn:{
-        width: 110,
-        height: 35,
+        width: 140,
+        height: 50,
         borderRadius: 25,
         borderWidth: 1.5,
         borderColor: '#fff',
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         marginBottom: 10 
     },
     btnText:{
-        fontSize: 15,
+        fontSize: 25,
         color: '#fff'
     }
 })

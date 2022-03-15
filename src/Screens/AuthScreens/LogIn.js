@@ -41,23 +41,24 @@ export const Login = ({navigation}) =>{
 const styles = StyleSheet.create({
     head:{
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     logo:{
-        width: 35,
-        height: 60
+        width: 55,
+        height: 80,
+        backgroundColor: "#000"
     },
     brand:{
         fontSize: 45,
         color: '#fff',
-        fontFamily: "Italiana-Regular",
+        // fontFamily: "Italiana-Regular",
         fontWeight: "200",
-        marginTop: 35
+        // marginTop: 35
     },
     subHeading:{
         fontSize: 25,
         color: '#fff',
-        fontFamily: "Italiana-Regular",
+        // fontFamily: "Italiana-Regular",
         fontWeight: "100",
         width: 250,
         margin: 20

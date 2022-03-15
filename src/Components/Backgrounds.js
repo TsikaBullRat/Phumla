@@ -34,27 +34,41 @@ const HomeBack = ({ name, children, uri }) => {
           <Image style={styles.profilePic} source={uri}/>
         </View>
       </View>
-      {children}
+      <View style={styles.list}>{children}</View>
     </ScrollView>
   );
 };
 
+const BookingBack = ({children}) =>{
+  return(
+    <View style={styles.background3}>
+      <View style={styles.triangle4}>
+
+      </View>
+    </View>
+  )
+}
+
 const styles = StyleSheet.create({
   background1: {
     width: "auto",
-    height: "100vh",
+    height: "100%",
     overflow: "hidden",
   },
   background2: {
-    width: "100vw",
-    height: "100vh",
+    width: "100%"
+  },
+  background3: {
+    width: "auto",
+    height: "100%",
     overflow: "hidden",
+    backgroundColor: "#6F4848"
   },
   layer: {
     backgroundColor: "#A08F8F",
     opacity: 0.4,
-    width: "100vw",
-    height: "100vh",
+    width: "100%",
+    height: "100%",
   },
   triangle1: {
     width: 0,
@@ -68,7 +82,7 @@ const styles = StyleSheet.create({
     borderLeftColor: "#6F4848",
     transform: [{skewX:"-5deg"}],
     left: -20,
-    top: "-110vh",
+    top: -880,
     // opacity: 2
   },
   triangle2: {
@@ -81,40 +95,57 @@ const styles = StyleSheet.create({
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     borderBottomColor: "#6F4848",
-    transform: [{skewX:"8deg"}],
+    transform: [{skewX:"80deg"}],
     left: -80,
-    top: "-130vh",
+    top: -980,
   },
   triangle3: {
     width: 0,
     height: 0,
     backgroundColor: "transparent",
-    borderLeftWidth: 320,
-    borderRightWidth: 370,
-    borderBottomWidth: 470,
+    borderLeftWidth: 300,
+    borderRightWidth: 350,
+    borderBottomWidth: 450,
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     borderBottomColor: "#6F4848",
-    transform: [{skewX:"-30deg"}],
+    transform: [{rotate:"-30deg"}],
+    left: -200,
+    top: -200,
+  },
+  triangle4: {
+    width: 0,
+    height: 0,
+    backgroundColor: "transparent",
+    borderLeftWidth: 300,
+    borderRightWidth: 350,
+    borderBottomWidth: 450,
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    borderBottomColor: "#fff",
+    transform: [{rotate:"-30deg"}],
     left: -200,
     top: -200,
   },
   subTitle: {
     flexDirection: "row",
-    fontFamily: "Italiana-Regular",
+    // fontFamily: "Italiana-Regular",
     color: "#fff",
     fontSize: 25,
   },
   content: {
     // backgroundColor: '#000',
-    width: "100vw",
-    height: "100vh",
-    top: "-170vh",
+    width: "100%",
+    height: "100%",
+    top: -80,
+    position: "absolute",
     alignItems: "center",
+    flex: 1,
+    justifyContent: "center"
   },
   title: {
     flexDirection: "row",
-    fontFamily: "Italiana-Regular",
+    // fontFamily: "Italiana-Regular",
     color: "#fff",
     fontSize: 35,
   },
@@ -123,15 +154,19 @@ const styles = StyleSheet.create({
     position: "absolute",
     width: 400,
     top: 300,
-    left: -160,
-    transform: [{skewX:"30deg"}],
-    justifyContent: 'space-evenly'
+    left: -130,
+    transform: [{rotate: "30deg"}]
   },
   profilePic:{
     borderRadius: 40,
     width: 80,
     height: 80,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    marginLeft: 120
+  },
+  list:{
+    // backgroundColor: "#000",
+    top: -100
   }
 });
-export { LoginBack, RegisterBack, HomeBack };
+export { LoginBack, RegisterBack, HomeBack, BookingBack };
